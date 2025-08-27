@@ -1,0 +1,3 @@
+Wireshark es un analizador de tráfico de red que captura los paquetes que llegan o
+salen de la interfaz de red seleccionada al abrir el programa. Indica la estructura de
+los paquetes capturados de acuerdo a la base de datos de protocolos que posee.
