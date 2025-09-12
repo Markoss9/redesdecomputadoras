@@ -26,8 +26,6 @@ def getLongitudCorrecta(trama):
     except:
         return False
 
-
-
 # -----------------------------------------
 # Función para verificar checksum
 # -----------------------------------------
@@ -62,6 +60,17 @@ lineas_incorrectas = [] # Para inciso 6
 # -----------------------------------------
 with open("Tramas_802-15-4.log", "r") as archivo:
     tramas = getListTramas(archivo)
+
+# Si queremos leer cualquier archivo, descomentar las líneas siguiente y comentar las dos anteriores
+# ---------------------------------------------------------
+# import sys
+# if len(sys.argv) < 2:
+    # print("Uso: python REDES-TP1.py <archivo.log>")
+    # sys.exit(1)
+# nombre_archivo = sys.argv[1]
+# with open(nombre_archivo, "r") as archivo:
+    # tramas = getListTramas(archivo)
+# ---------------------------------------------------------
 
 for idx, trama in enumerate(tramas):
     total_tramas += 1
@@ -108,3 +117,4 @@ for idx, trama_limpia in lineas_con_escape:
 print("\nLíneas con longitud o checksum incorrecto:")
 for idx, trama_erronea in lineas_incorrectas:
     print(f"Línea {idx}: {trama_erronea}")
+
